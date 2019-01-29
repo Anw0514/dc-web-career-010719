@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Edit <%= @apple.name %></title>
+  </head>
+  <body>
+    <form action="/apples/<%= @apple.id %>" method="post">
+      <input type="hidden" value="patch" name="_method">
+      <label for="Name">
+        <p>Name: <br><input type="text" name="name" value="<%= @apple.name %>"></p><br>
+      </label>
+      <label for="Crunchiness">
+        <p>Crunchiness: <br><input type="text" name="crunchiness" value="<%= @apple.crunchiness %>"></p><br>
+      </label>
+      <label for="Summary">
+        <p>Summary: <br><input type="text" name="summary" value="<%= @apple.summary %>"></p><br>
+      </label>
+      <label for="Versatility">
+        <p>Versatility: <br><input type="text" name="versatility" value="<%= @apple.versatility %>"></p><br>
+      </label>
+      <label for="Sweetness">
+        <p>Sweetness: <br><input type="text" name="sweetness" value="<%= @apple.sweetness %>"></p><br>
+      </label>
+      <label for="Origin">
+        <p>Origin: <br><input type="text" name="origin" value="<%= @apple.origin %>"></p><br>
+      </label>
+      <label for="Pie?">
+        <p>Pie? <br>
+          <% if @apple.pie? == true %>
+          <% truecheck = checked%>
+          <% elsif @apple.pie? == false %>
+          <% falsecheck = checked%>
+          <% end %>
+        True: <input type="radio" name="pie?" value="true" checked="<%= truecheck %>"><br>
+        False: <input type="radio" name="pie?" value="false" checked="<%= falsecheck %>"></p><br>
+      </label>
+      <label for="Parentage">
+        <p>Parentage: <br><input type="text" name="parentage" value="<%= @apple.parentage %>"></p><br>
+      </label>
+      <input type="submit" id="Submit" value="Edit apple info">
+    </form>
+  </body>
+</html>

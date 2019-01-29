@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>All the books</title>
+    <title>All The Apples</title>
 </head>
 <body>
 
     <ul>
-        <% @books.each do |book| %>
+        <% @apples.each do |apple| %>
             <li>
-                <a href="/books/<%= book.id %>">
-                    <%= book.title %>
+                <a href="/apples/<%= apple.id %>">
+                    <%= apple.name %>
                 </a>
             </li>
         <% end %>
     </ul>
 
-<div id="anchor_point">Anchor Here!</div>
+<a href="/">Home</a>
 </body>
 </html>

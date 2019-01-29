@@ -10,12 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_191548) do
+ActiveRecord::Schema.define(version: 2019_01_29_173941) do
 
-  create_table "books", force: :cascade do |t|
-    t.string "author"
-    t.string "title"
-    t.text "snippet"
+  create_table "apples", force: :cascade do |t|
+    t.string "name"
+    t.string "crunchiness"
+    t.text "summary"
+    t.integer "versatility"
+    t.string "sweetness"
+    t.string "origin"
+    t.boolean "pie?"
+    t.string "parentage"
   end
 
 end

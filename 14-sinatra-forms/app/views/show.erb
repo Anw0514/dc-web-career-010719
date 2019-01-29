@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Detail Page for <%= @book.title %></title>
+    <title>Detail Page for <%= @apple.name %></title>
 </head>
 <body>
 
-    <h2><%= @book.title %> by <%= @book.author %></h2>
+    <h2><%= @apple.name %></h2>
 
-    <div><%= @book.snippet %></div>
+    <div>Summary: <%= @apple.summary %></div>
+    <div>Crunchiness: <%= @apple.crunchiness %></div>
+    <div>Sweetness: <%= @apple.sweetness %></div>
+    <div>Versatility: <%= @apple.versatility %></div>
+    <div>Can You Pie It?: <%= @apple.pie? %></div>
+    <div>Parentage: <%= @apple.parentage %></div>
 
-    <a href="/books">Book Index Page</a>
+    <a href="/apples">Apple Index Page</a>
+    <a href="/apples/<%= @apple.id %>/edit">Edit This Apple</a>
 </body>
 </html>
